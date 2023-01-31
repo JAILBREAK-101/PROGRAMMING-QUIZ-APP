@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROGRAMMING QUIZ APP</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="header">
+                <h1>PROGRAMMING QUIZ APP</h1>
+                <div class="question-count"><span class="ques-count"></span>/10 questions</div>
+                <!-- <code>JAILBREAK</code> -->
+            </div>
+
+            <div class="pick-section">
+                <p>Welcome to programming quiz app, you are to pick programming language in which you want to have your
+                    quiz.</p>
+                <div class="selection-section">
+                    <select class="quiz-options" name="quiz-options" id="quiz-options">
+                        <option value="pick">pick</option>
+                        <option value="JAVASCRIPT">JAVASCRIPT</option>
+                        <option value="PYTHON">PYTHON</option>
+                        <option value="JAVA">JAVA</option>
+                        <!-- <option value="PYTHON">PYTHON</option>
+                        <option value="JAVA">JAVA</option> -->
+                    </select>
+                    <button id='start-btn' class="start">Start</button>
+                </div>
+            </div>
+
+            <div class="card-for-question">
+                <h1 class="prog-lang"></h1>
+                <h2 class="question-count">Question <span class="count"></span></h2>
+                <h2 class="question">Question</h2>
+                <div class="answer-grid">
+                    <div class="answer option">Option 1</div>
+                    <div class="answer option">Option 2</div>
+                    <div class="answer option">Option 3</div>
+                    <div class="answer option">Option 4</div>
+                </div>
+                <!-- FOR THE CORRECT AND THE WRONG STATE. -->
+                <div class="correct-state">
+                    <h3>You got the question correctly!</h3>
+                </div>
+                <div class="wrong-state">
+                    <h3>You didn't get the question correctly!</h3>
+                </div>
+                <div class="button-group">
+                    <button id='reset-btn' class="reset">Reset</button>
+                    <button id='next-btn' class="next">Next</button>
+                    <!-- The confirmation modal for the reset button when clicked. -->
+                    <div class="reset-modal">
+                        <div class="header">
+                            <p>Are you sure you want to reset the game and start all over? </p>
+                        </div>
+                        <div class="btn-group">
+                            <button type='button' class="yes">Yes</button>
+                            <button type='button' class="no">No</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="group-btn">
+                <button class="menu">End game</button>
+                <button class="instruct">Instructions</button>
+                <!-- the confirmation modal for the end game button when clicked. -->
+                <div class="end-game-modal">
+                    <div class="header">
+                        <p>Are you sure you want to end the game, and go back to the selection menu?</p>
+                    </div>
+                    <div class="btn-group">
+                        <button type='button' class="yes">Yes</button>
+                        <button type='button' class="no">No</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AFTER THE QUIZ IS OVER. -->
+            <div class="for-displaying-scores">
+                <div class="text">
+                    <span class="emotion"></span>You got <span class="score"></span> Points over 100.
+                </div>
+                <button class="start">START NEW GAME</button>
+            </div>
+        </div>
+
+        <dialog id='modal-instruct' class="instructions">
+            <!-- Instructions of the game comes here. -->
+            <div class="instructions-container">
+                <div class="header">
+                    <p>Welcome to Programming Quiz App, carefully read the instructions before you start the game.</p>
+                    <button class="close">&times;</button>
+                </div>
+                <ol>
+
+                    <!-- The instructions are as follows. -->
+                    <li>You are to select a particular programming language, before starting the quiz.</li>
+
+                    <li>Each of these programming language quizes have a minimum of 10 questions per quiz attempt for
+                        you to answer, before the quiz ends.</li>
+
+                    <li>You are to select one option of each question presented to you during the quiz as you'll be
+                        awarded 10 points for each correct question.</li>
+
+                    <li>To start the game all over, you can click on the reset button, to end the game and go back to
+                        the main menu, you can click on the end ganme button.</li>
+
+                    <li>Feel free to read the questions carefully, without rushing before answering for there's no time
+                        frame for any of the questions of the quiz.</li>
+                </ol>
+            </div>
+        </dialog>
+        <div id="modal_overlay" class="overlay-for-modals"></div>
+    </main>
+</body>
+<script src="./js/main.js"></script>
+<script src="./js/javascript.js"></script>
+<script src="./js/python.js"></script>
+<script src="./js/java.js"></script>
+
+</html>

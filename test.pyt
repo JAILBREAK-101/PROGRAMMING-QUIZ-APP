@@ -1,0 +1,5 @@
+# TO CHECK, BASED ON THE QUESTIONS THAT HAVE BEEN ANSWERED.
+x = 23
+print(type(x))
+
+var = 3

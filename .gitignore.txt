@@ -1,0 +1,6 @@
+# ignore all .java files
+* .java
+# ignore all .py files
+* .pyt
+#ignore reserve_text.readme.
+* reserve_text.md
