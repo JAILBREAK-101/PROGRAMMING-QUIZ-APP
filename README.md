@@ -1,8 +1,9 @@
-### THIS IS A QUIZ APP MADE WITH JAVASCRIPT, THE MARKUP LANGUAGE (HTML), AND CSS
+# THIS IS A QUIZ APP MADE WITH HTML, CSS, AND JAVASCRIPT
+This is a Quiz App, that lets you answer multiple question, and shows your score after. It is a Programming quiz app, concentrated on Programming alone (enjoy).
 
 ## THE INSTRUCTIONS OF THE QUIZ GAME
 
-## FEATURES TO ADD
+### FEATURES TO ADD
 
 - More Programming Languages and programming questions for each languages added.
 - Backend to make user login as an admin to use the app
