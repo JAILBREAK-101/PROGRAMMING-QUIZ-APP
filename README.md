@@ -1,6 +1,8 @@
 # THIS IS A QUIZ APP MADE WITH HTML, CSS, AND JAVASCRIPT
 This is a Quiz App, that lets you answer multiple question, and shows your score after. It is a Programming quiz app, concentrated on Programming alone (enjoy).
 
+**Live Link for the App**: [https://jailbreak-101.github.io/QUIZ-PROJECT-APP/]
+
 ## THE INSTRUCTIONS OF THE QUIZ GAME
  <li>You are to select a particular programming language, before starting the quiz.</li>
 
