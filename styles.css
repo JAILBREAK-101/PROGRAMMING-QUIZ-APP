@@ -1,0 +1,377 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg: orange;
+    --secondary-clr: rgb(18, 18, 226);
+    --tetiary-clr: red;
+    --supplementry-clr: green;
+}
+
+html {
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    background: var(--main-bg);
+    color: black;
+}
+
+main {
+    margin: 20px;
+    position: relative;
+}
+
+main,
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container {
+    min-height: 100%;
+    margin: 1rem;
+    position: relative;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.timer,
+.for-displaying-scores,
+.question-count {
+    display: none;
+}
+
+P {
+    max-width: 50ch;
+    text-align: center;
+}
+
+.pick-section {
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* For displaying the number of questions */
+.question-count {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.selection-section {
+    display: flex;
+    gap: 1rem;
+}
+
+.quiz-options {
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: 1px solid rgba(245, 245, 245, 0.523);
+}
+
+option {
+    cursor: pointer;
+}
+
+.quiz-options option:hover {
+    color: lightgreen;
+}
+
+#start-btn {
+    border: 0;
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    transition: opacity .1s, translate .2s;
+    background-color: var(--secondary-clr);
+    color: white;
+    font-weight: 600;
+}
+
+#start-btn:hover {
+    opacity: .5;
+    translate: 0 -9px;
+    cursor: pointer;
+}
+
+.card-for-question,
+.pick-section {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.913);
+    border: 1px solid white;
+}
+
+.card-for-question {
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.question {
+    text-align: center;
+    margin: 0;
+}
+
+.answer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: center;
+}
+
+.answer-grid>* {
+    text-align: center;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 1rem;
+    align-items: center;
+}
+
+.menu,
+.reset,
+.next,
+.answer,
+.instruct,
+.start {
+    width: 100%;
+    border: 0;
+    padding: .3rem .6rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background: var(--secondary-clr);
+    color: white;
+}
+
+.answer {
+    /* background-color: blue; */
+    color: black;
+    font-weight: 600;
+    /* transition: background-color .1s box-shadow .1s, opacity .1s transform .1s; */
+    transition: background-color .2s, transform .1s;
+    padding: 1rem .7rem;
+    background: white;
+}
+
+.answer:hover {
+    transform: translateY(-5px);
+    opacity: .5;
+    box-shadow: 0, 0, 10px, 0, rgba(0, 0, 0, .75);
+}
+
+#options {
+    cursor: pointer;
+    width: 100%;
+    border: 0;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.correct {
+    background: green;
+    color: white;
+}
+
+.wrong {
+    background: red;
+    color: white;
+}
+
+/* FOR ENDING THE GAME, AND GOING BACK TO THE MAIN MENU AND ALSO FOR SHOWING THE INSTRUCTION. */
+.group-btn {
+    margin-top: 1rem;
+    align-self: center;
+    display: flex;
+    gap: 1rem;
+}
+
+/* EACH OF THESE MODALS */
+#modal-instruct,
+.end-game-modal,
+.reset-modal {
+    position: fixed;
+    border: 0;
+    background: whitesmoke;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    max-width: 40ch;
+    box-shadow: -5px 5px 10px 0 rgba(0, 0, 0, .25);
+    transition: all .2s position;
+    transform-origin: top;
+    padding: .7em;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: 10;
+}
+
+/* Instruction Modal */
+.header {
+    display: flex;
+    align-items: center;
+    font-size: .5em;
+}
+
+.header p {
+    text-align: left;
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.instructions-container ol {
+    font-size: .6em;
+}
+
+ol>* {
+    margin-top: 1em;
+}
+
+/* Reset Button Modal */
+.reset-modal,
+.end-game-modal {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    scale: 0;
+    transition: 200ms ease-in-out;
+}
+
+.active {
+    scale: 1;
+}
+
+/* End Game Button Modal */
+.end-game-modal {
+    /* display: none; */
+}
+
+:is(.end-game-modal, .reset-modal) p {
+    text-align: center;
+}
+
+/* The cancel button */
+.close {
+    cursor: pointer;
+    border: 0;
+    background: none;
+}
+
+/* Global for the yes and no buttons. */
+.btn-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.yes,
+.no {
+    border: 0;
+    background: none;
+    padding: 1em;
+    cursor: pointer;
+    color: white;
+    transition: opacity .2s;
+}
+
+.yes {
+    background: var(--secondary-clr);
+}
+
+.no {
+    background: var(--tetiary-clr);
+}
+
+:is(.yes, .no):hover {
+    opacity: .5;
+}
+
+/* OVERLAY FOR MODALS. */
+.overlay-for-modals {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .50);
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+/* When it is active, when the modal is open. */
+.overlay-for-modals.activee {
+    pointer-events: all;
+    opacity: 1;
+}
+
+/* FOR DISPLAYING THE SCORES AFTER THE USER HAS PLAYED THE QUIZ GAME. */
+.for-displaying-scores {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.for-displaying-scores .text {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+}
+
+span.score {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.start {
+    background: rgba(22, 21, 21, 0.778);
+    transition: translate .2s ease-in-out, .1s background;
+}
+
+.start:hover {
+    translate: 0 -10px;
+    background: rgb(22, 21, 21);
+    ;
+}
+
+/* FOR MOBILE RESPONSIVENESS */
+@media (max-width: 800px) {}
