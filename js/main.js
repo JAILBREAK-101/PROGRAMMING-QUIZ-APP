@@ -70,7 +70,7 @@ reset_button.addEventListener("click", () => {
 function end_game() {
   // The modal should open.
   modal_for_ending.classList.add("active");
-  modal_overlay.classList.add("active");
+  modal_overlay.classList.add("activee");
   let yes_button = document.querySelector(".end-game-modal .yes");
   let no_button = document.querySelector(".end-game-modal .no");
 

@@ -22,24 +22,25 @@ body {
     background: black;
     background: var(--main-bg);
     color: black;
-    height: 100vh;
+    height: 150vh;
 }
 
 main {
     margin: 20px;
     position: relative;
+    min-height: 100%;
 }
 
 main,
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     gap: 1rem;
 }
 
 .container {
+    align-items: center;
+    justify-content: center;
     min-height: 100%;
     margin: 1rem;
     position: relative;
@@ -294,7 +295,7 @@ ol>* {
     cursor: pointer;
     border: 0;
     background: none;
-    font
+    /* font */
 }
 
 /* Global for the yes and no buttons. */
@@ -376,7 +377,7 @@ span.score {
 }
 
 /* FOR MOBILE RESPONSIVENESS */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
 
     /* FUNCTIONAL CLASSES */
     .hidden {
@@ -384,7 +385,7 @@ span.score {
     }
 
     .fixed-bg {
-        background-attachment: fixed;
+        /* background-attachment: fixed; */
     }
 
     /* HTML ELEMENTS */
@@ -402,7 +403,8 @@ span.score {
     }
 
     /* THE ANSWER GRID SHOULD FIT THE SCREEN FOR MOBILE AND THE FONTSIZE SHOULD BE REDUCED. */
-    .question, .answer {
+    .question,
+    .answer {
         font-size: .85rem;
     }
 
@@ -410,7 +412,7 @@ span.score {
         grid-template-columns: 1fr;
     }
 
-    /* Make responsive for mobile */
+    /* Make the modals responsive for mobile */
     #modal-instruct {
         position: relative;
     }
