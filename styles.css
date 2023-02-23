@@ -22,7 +22,7 @@ body {
     background: black;
     background: var(--main-bg);
     color: black;
-    height: 150vh;
+    height: 100vh;
 }
 
 main {
