@@ -70,7 +70,7 @@ reset_button.addEventListener("click", () => {
 function end_game() {
   // The modal should open.
   modal_for_ending.classList.add("active");
-  modal_overlay.classList.add("activee");
+  modal_overlay.classList.add("active");
   let yes_button = document.querySelector(".end-game-modal .yes");
   let no_button = document.querySelector(".end-game-modal .no");
 
@@ -92,9 +92,9 @@ function end_game() {
 
 function show_instructions() {
   modal_for_instructions.open = true;
-  modal_overlay.classList.add("activee")
+  modal_overlay.classList.add("activee");
   // let background be stiff
-  background.classList.add("fixed-bg")
+  background.classList.add("fixed-bg");
   // Close the modal.
   let close_button = document.querySelector(".instructions-container .close");
   close_button.addEventListener("click", () => {
@@ -287,7 +287,7 @@ next_button.addEventListener("click", () => {
 });
 
 function PersistOnReload() {
-    // when the user reloads, during the game, let it still save changes and not reload unless they click on end 
+  // when the user reloads, during the game, let it still save changes and not reload unless they click on end
 }
 
 // NOTE: WHEN DEALING WITH FUNCTIONS, ALWAYS DECLARE VARIABLES ASSOCIATED WITH THE FUNCTIONS, INSIDE THE FUNCTION, AND THEN USE CALLBACK FUNCTIONS, TO ACCESS THIS VARIABLES, INSIDE THOSE FUNCTIONS THAT THE VARIABLES ARE STORED.
