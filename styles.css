@@ -22,6 +22,7 @@ body {
     background: black;
     background: var(--main-bg);
     color: black;
+    height: 100vh;
 }
 
 main {
@@ -293,6 +294,7 @@ ol>* {
     cursor: pointer;
     border: 0;
     background: none;
+    font
 }
 
 /* Global for the yes and no buttons. */
@@ -374,4 +376,42 @@ span.score {
 }
 
 /* FOR MOBILE RESPONSIVENESS */
-@media (max-width: 800px) {}
+@media (max-width: 800px) {
+
+    /* FUNCTIONAL CLASSES */
+    .hidden {
+        display: none;
+    }
+
+    .fixed-bg {
+        background-attachment: fixed;
+    }
+
+    /* HTML ELEMENTS */
+    main {
+        min-height: 100%;
+    }
+
+    /* WHEN IN MOBILE LET "PGA" BE REVEALED AND THE OTHER HIDDEN */
+    .header {
+        justify-content: space-evenly;
+    }
+
+    .header h1:nth-child(1) {
+        display: none;
+    }
+
+    /* THE ANSWER GRID SHOULD FIT THE SCREEN FOR MOBILE AND THE FONTSIZE SHOULD BE REDUCED. */
+    .question, .answer {
+        font-size: .85rem;
+    }
+
+    .answer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make responsive for mobile */
+    #modal-instruct {
+        position: relative;
+    }
+}
