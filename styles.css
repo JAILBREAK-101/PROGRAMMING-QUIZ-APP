@@ -415,5 +415,6 @@ span.score {
     /* Make the modals responsive for mobile */
     #modal-instruct {
         position: relative;
+        translate: 50%, 50%;
     }
 }
