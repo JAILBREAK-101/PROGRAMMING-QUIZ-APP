@@ -22,7 +22,7 @@ body {
     background: black;
     background: var(--main-bg);
     color: black;
-    height: 100vh;
+    height: 150vh;
 }
 
 main {
@@ -57,6 +57,10 @@ h1 {
     margin: 0;
     font-size: 1.1rem;
     text-align: center;
+}
+
+.short {
+    display: none;
 }
 
 .timer,
@@ -377,7 +381,7 @@ span.score {
 }
 
 /* FOR MOBILE RESPONSIVENESS */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     /* FUNCTIONAL CLASSES */
     .hidden {
@@ -388,18 +392,17 @@ span.score {
         /* background-attachment: fixed; */
     }
 
-    /* HTML ELEMENTS */
-    main {
-        min-height: 100%;
-    }
-
     /* WHEN IN MOBILE LET "PGA" BE REVEALED AND THE OTHER HIDDEN */
     .header {
         justify-content: space-evenly;
     }
-
+dddd
     .header h1:nth-child(1) {
         display: none;
+    }
+
+    .short {
+        display: inline;
     }
 
     /* THE ANSWER GRID SHOULD FIT THE SCREEN FOR MOBILE AND THE FONTSIZE SHOULD BE REDUCED. */
