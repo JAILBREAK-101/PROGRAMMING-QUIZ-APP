@@ -8,5 +8,3 @@
 - More features that gives user control over the app, like : Suggestions for questions to be added section. Adding past questions, and turning it into a school app, as well as programming.
 
 ### THIS IS A QUIZ APP MADE WITH JAVASCRIPT, THE MARKUP LANGUAGE (HTML), AND CSS
-
-## THE INSTRUCTIONS OF THE QUIZ GAME
